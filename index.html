@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Ziệt!</title>
+  
+  <!-- Nhúng Google Fonts Viết Tay Chuẩn Tiếng Việt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Playpen+Sans:wght@500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Thư viện tạo pháo giấy (Confetti) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Thẻ phát nhạc ẩn -->
+  <audio id="bgMusic" src="music/happybirthday.mp3" loop preload="auto"></audio>
+
+  <!-- Hiệu ứng bong bóng bay ở nền -->
+  <div class="background-decor" id="bgDecor"></div>
+
+  <div class="container">
+    
+    <!-- MÀN 1: HỘP QUÀ BAN ĐẦU -->
+    <section id="step-gift" class="card active">
+      <h1 class="art-title">Món quà nho nhỏ dành cho Ziệt ✨</h1>
+      <div class="gift-wrapper" id="giftBox">
+        <img src="Pic/birthday_gift.png" id="giftImg" alt="birthday_gift" onerror="this.src='Pic/birthday_gift.gif'">
+      </div>
+    </section>
+
+    <!-- MÀN 2: BÁNH KEM & LỜI CHÚC -->
+    <section id="step-cake" class="card hidden">
+      <h1 class="title-birthday">Happy Birthday to You! 🎂</h1>
+      
+      <div class="cake-wrapper" id="cakeWrapper">
+        <img src="Pic/cake.jpg" id="cakeImg" alt="cake" onerror="this.src='Pic/cake.gif'">
+        <span class="cake-hint">Cùng nhau đốt nến bánh sinh nhật nhé !!!</span>
+      </div>
+
+      <!-- Khung lời chúc chữ gõ tự động -->
+      <div class="message-box">
+        <p id="typed-text"></p>
+      </div>
+
+      <button id="btnNext" class="btn-glow">Bất ngờ cuối dành cho Ziệt</button>
+    </section>
+
+    <!-- MÀN 3: ALBUM 4 HỘP QUÀ MỞ ẢNH GHIM -->
+    <section id="step-gallery" class="card hidden">
+      <h1 class="art-title">TÌNH YÊU NHO NHỎ DÀNH CHO ZIỆT </h1>
+      <p class="sub-title">Mở quà dui dẻ nhé !!!</p>
+
+      <div class="gift-grid" id="giftGrid">
+        
+        <!-- Hộp quà 1 -->
+        <div class="gift-item-box" data-index="1">
+          <div class="gift-cover">
+            <img src="Pic/birthday_gift.png" alt="Quà 1" onerror="this.src='Pic/birthday_gift.gif'">
+          </div>
+          <div class="photo-card hidden-photo">
+            <div class="pin">📌</div>
+            <img src="Pic/Viet1.jpg" alt="Viet 1" onerror="this.src='Pic/Viet1.png'">
+          </div>
+        </div>
+
+        <!-- Hộp quà 2 -->
+        <div class="gift-item-box" data-index="2">
+          <div class="gift-cover">
+            <img src="Pic/birthday_gift.png" alt="Quà 2" onerror="this.src='Pic/birthday_gift.gif'">
+          </div>
+          <div class="photo-card hidden-photo">
+            <div class="pin">📌</div>
+            <img src="Pic/Viet2.jpg" alt="Viet 2" onerror="this.src='Pic/Viet2.png'">
+          </div>
+        </div>
+
+        <!-- Hộp quà 3 -->
+        <div class="gift-item-box" data-index="3">
+          <div class="gift-cover">
+            <img src="Pic/birthday_gift.png" alt="Quà 3" onerror="this.src='Pic/birthday_gift.gif'">
+
+          </div>
+          <div class="photo-card hidden-photo">
+            <div class="pin">📌</div>
+            <img src="Pic/Viet3.jpg" alt="Viet 3" onerror="this.src='Pic/Viet3.png'">
+          </div>
+        </div>
+
+        <!-- Hộp quà 4 -->
+        <div class="gift-item-box" data-index="4">
+          <div class="gift-cover">
+            <img src="Pic/birthday_gift.png" alt="Quà 4" onerror="this.src='Pic/birthday_gift.gif'">
+
+          </div>
+          <div class="photo-card hidden-photo">
+            <div class="pin">📌</div>
+            <img src="Pic/Viet4.jpg" alt="Viet 4" onerror="this.src='Pic/Viet4.png'">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
